@@ -1,0 +1,73 @@
+<html><head>
+    <title>AWS IaaC Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+      <h1>AWS IaaC Generator</h1>
+      <div class="container">
+        <div class="left-column">
+          <div class="example-card">
+            <div class="example-title">Examples:</div>
+            <div class="example-item">- Create a VPC with CIDR 10.0.0.0/16</div>
+            <div class="example-item">- Launch 2 EC2 t2.micro instances</div>
+            <div class="example-item">- Create an S3 bucket for static files</div>
+            <div class="example-item">- Create a Lambda function</div>
+            <div class="example-item">- Launch an RDS instance</div>
+            <div class="example-item">- Create a DynamoDB table</div>
+            <div class="example-item">- Deploy ECS cluster</div>
+            <div class="example-item">- Setup EKS cluster</div>
+            <div class="example-item">- Configure CloudFront distribution</div>
+            <div class="example-item">- Create Route53 hosted zone</div>
+            <div class="example-item">- Setup ElastiCache cluster</div>
+            <div class="example-item">- Configure Application Load Balancer</div>
+            <div class="example-item">- Create SNS topic</div>
+            <div class="example-item">- Setup SQS queue</div>
+            <div class="example-item">- Create API Gateway REST API</div>
+            <div class="example-item">- Setup CloudWatch alarms</div>
+            <div class="example-item">- Create IAM roles and policies</div>
+            <div class="example-item">- Configure WAF rules</div>
+            <div class="example-item">- Enable Shield protection</div>
+            <div class="example-item">- Create KMS keys</div>
+            <div class="example-item">- Setup Cognito pools</div>
+            <div class="example-item">- Create Step Functions state machine</div>
+            <div class="example-item">- Configure EventBridge rules</div>
+            <div class="example-item">- Setup CodeBuild project</div>
+            <div class="example-item">- Create CodePipeline for CI/CD</div>
+            <div class="example-item">- Configure CodeDeploy application</div>
+            <div class="example-item">- Store secrets in Secrets Manager</div>
+            <div class="example-item">- Create ECR repository</div>
+          </div>
+        </div>
+        
+        <div class="right-column">
+          <div class="code-editor">
+            <textarea class="input-area" placeholder="Describe your infrastructure here..."></textarea>
+            
+            <div class="button-group">
+              <button onclick="generateInfraAndDiagram()">Generate Code</button>
+              <button onclick="clearCode()">Clear Code</button>
+            </div>
+            
+            <div id="validationMessage" style="color: #ff4444; margin: 10px 0;"></div>
+            
+            <div class="output-container">
+              <div class="copy-icon" onclick="copyToClipboard()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+              </div>
+              <pre class="output-area" id="codeOutput"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="copy-notification" id="copyNotification"></div>
+    
+    
+  
+    <script src="./js/index.js"></script>
+    </body>
+    <footer style="text-align: center;">Developed By Eng.Mohanned Atohami!</footer>
+    </html>
